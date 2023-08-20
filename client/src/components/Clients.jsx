@@ -1,7 +1,7 @@
 import React from "react";
 import ClientRow from "./ClientRow";
 import Loader from "./Loader";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { GET_CLIENTS } from "../queries/ClientQueries";
 
 const Clients = () => {
