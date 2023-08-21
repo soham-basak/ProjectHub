@@ -3,6 +3,7 @@ import Loader from "../components/Loader";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../queries/ProjectQueries";
 import ClientInfo from "../components/ClientInfo";
+import DeleteProjectButton from "../components/DeleteProjectButton";
 
 const Project = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const Project = () => {
   return (
     <>
       {!loading && !error && (
-        <div className="mx-auto w-75 card p-5">
+        <div className="d-flex mx-auto w-75 card p-5">
           <Link
             to="/"
             className="btn btn-light btn-sm
@@ -24,6 +25,7 @@ const Project = () => {
           >
             Back
           </Link>
+
           <h1>{data.project.name}</h1>
           <p>{data.project.description}</p>
 
@@ -31,6 +33,8 @@ const Project = () => {
           <p className="lead">{data.project.status}</p>
 
           <ClientInfo client={data.project.client} />
+
+          <DeleteProjectButton projectId={data.project.id} />
         </div>
       )}
     </>
