@@ -10,7 +10,7 @@ ProjectHub is a full-stack web application designed for efficient project manage
 
 ## Demo
 
-Check out the live demo of REVIEWiT: [Demo Link](https://project-hub-bydex.netlify.app/)
+Check out the live demo of ProjectHub: [Demo Link](https://project-hub-bydex.netlify.app/)
 
 ## Features
 

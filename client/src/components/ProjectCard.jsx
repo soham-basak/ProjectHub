@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -8,9 +9,9 @@ const ProjectCard = ({ project }) => {
           <div className="d-flex justify-content-between align-items-center">
             <h5 className="card-title">{project.name}</h5>
 
-            <a className="btn btn-light " href={`/projects/${project.id}`}>
+            <Link className="btn btn-light " to={`/projects/${project.id}`}>
               View
-            </a>
+            </Link>
           </div>
           <p className="small">
             Status: <strong>{project.status}</strong>
