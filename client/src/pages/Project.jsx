@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../queries/ProjectQueries";
+import ClientInfo from "../components/ClientInfo";
 
 const Project = () => {
   const { id } = useParams();
@@ -28,6 +29,8 @@ const Project = () => {
 
           <h5 className="mt-3">Project Status</h5>
           <p className="lead">{data.project.status}</p>
+
+          <ClientInfo client={data.project.client} />
         </div>
       )}
     </>
